@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+
+<body>
+
+
+    <div class="mobile-nav-button" onclick="onMenuClick();">
+        <img id="menu-icon" src="menu.png" width="50px">
+        <ul class="navigation-mobile">
+            <a href="">
+                <li class="nav-elements-mobile">Home</li>
+            </a>
+            <a href="tel:+27609958794">
+                <li class="nav-elements-mobile">Contact</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="somkhanda">
+        <img src="khanda.png">
+    </div>
+
+    <div class="countdown">
+        <div class="contain">
+            <div id="clockdiv">
+                <div>
+                    <span class="days">00</span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours">00</span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes">00</span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds">00</span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+            </div>
+        </div>
+        <div class="host">
+            <img src=" Halloween_flyer-Recovered,-Recovered.png" ">
+            <div class=" letter">
+            <h2>" Let's ROCK !!!"</h2>
+            <div class="content">
+                <h3>PLEASE NOTE</h3>
+                <p> •No coolerbox allowed, unless it enters the venue empty</p>
+                <p>•Hubbly is available at the venue.</p>
+                <p>•Free shot at the gate for anyone wearing izaza and is a VIP-ticket holder.</p>
+                <p> •Do not worry about loadshedding, we have full back-up.</p>
+                <p>•Please cooperate with security.</p>
+                <p> •You will be in a safe space, don’t worry.</p>
+                <p> •General and VIP tickets are R70 & R100 respectively at the gate.</p>
+                <p> •No bad vibes, let’s turn up.</p>
+                <p>•Parking is available.</p>
+                <p> •For transportation, contact 0609958794.</p>
+                <p> •Let’s have fun! Be there or be told!</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <div class="somkhanda">
+        <img src="khanda.png">
+    </div>
+
+
+</body>
+<script>
+
+    var menu = document.querySelector(".navigation-mobile");
+
+    function onMenuClick() {
+        menu.style.display = "block";
+    }
+    var menu = document.querySelector(".navigation-mobile");
+
+    function onMenuClick() {
+        menu.style.display = "block";
+    }
+    var countdown = new Date("Sept 23,2023 00:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var t = countdown - now;
+
+        var seconds = Math.floor((t / 1000) % 60); // convert total seconds to number of seconds by diving total seconds by number of seconds remaining after days,hours, and minutes are account for
+        var minutes = Math.floor((t / 1000 / 60) % 60); // convert total seconds to number of minutes by diving total seconds by number of minutes remaining after days and hours are account for
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24); // convert total seconds to number of hours by diving total seconds by number of hours remaining after days are accounted for 
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+        document.querySelector('.days').innerHTML = days
+        document.querySelector('.hours').innerHTML = hours
+        document.querySelector('.minutes').innerHTML = minutes
+        document.querySelector('.seconds').innerHTML = seconds
+    }, 1000)
+</script>
+
+</html>
